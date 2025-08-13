@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About – Noelia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Noelia</title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -19,20 +20,28 @@
       </div>
     </nav>
 
-    <header>
-      <h1>About Me</h1>
-    </header>
+    <main class="container">
+      <header class="hero">
+        <h1>About Me</h1>
+        <p class="lead">
+          I’m learning web development to build my own sites and work remotely.
+        </p>
+      </header>
 
-    <main>
-      <p>
-        Hello! I’m Noelia. I’m learning web development to build my own sites
-        and work remotely.
-      </p>
-      <p>Interests: design, business, writing, and helping people online.</p>
+      <section class="content">
+        <p>
+          Interests: design, business, writing, and helping people online. This
+          page is part of my first multi-page site.
+        </p>
+      </section>
     </main>
 
-    <footer>
-      <p>Made with ❤️ on August 11th</p>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Noelia</p>
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

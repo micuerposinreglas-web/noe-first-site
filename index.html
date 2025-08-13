@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
->
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My First Webpage</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Site CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="nav">
-  <a class="logo" href="index.html">Noelia</a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-  </div>
-</nav>
+      <a class="logo" href="index.html">Noelia</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
 
-    <header>
-      <h1>Hello, I’m Noelia</h1>
-    </header>
+    <main class="container">
+      <header class="hero">
+        <h1>Hello, I’m Noelia</h1>
+        <p class="lead">This is my very first webpage built with HTML!</p>
+      </header>
 
-    <main>
-      <p>This is my very first webpage built with HTML!</p>
-      <img src="https://picsum.photos/300" alt="Random placeholder image" />
+      <figure class="card">
+        <img
+          src="https://picsum.photos/seed/noe-hero/600/420"
+          alt="A calm scene"
+        />
+      </figure>
+
+      <p class="made-with">
+        Made with <span class="heart">❤️</span> on August 11th
+      </p>
+
+      <p class="cta">
+        <a class="btn" href="about.html">Learn more</a>
+      </p>
     </main>
 
-    <footer>
-      <p>Made with ❤️ on August 11th</p>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Noelia</p>
     </footer>
+
+    <script>
+      // tiny enhancement: keeps year current
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
-<a class="btn" href="about.html">Learn more</a>
-
