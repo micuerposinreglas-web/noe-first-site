@@ -177,3 +177,57 @@ a.btn:hover {
   outline: 3px solid #6c4ce0;
   outline-offset: 2px;
 }
+/* ===== Day 5 additions ===== */
+
+/* Dark theme (variable overrides on <html data-theme="dark">) */
+html[data-theme="dark"] {
+  --bg: #0f1115;
+  --text: #e5e7eb;
+  --muted: #9aa0aa;
+  --card: #171a21;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Ghost button for the theme toggle in the nav */
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  background: rgba(108, 76, 224, 0.12);
+}
+
+/* Back-to-top button */
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Contact page helpers */
+.char-row {
+  text-align: right;
+  color: var(--muted);
+  margin-top: 6px;
+}
