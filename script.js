@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     else btt.classList.remove("show");
   }
   window.addEventListener("scroll", onScroll);
-  if (btt) btt.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  if (btt)
+    btt.addEventListener("click", () =>
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    );
 
   // ----- Contact form helpers -----
   const form = document.getElementById("contact-form");
@@ -75,10 +78,28 @@ document.addEventListener("DOMContentLoaded", () => {
             if (statusEl) statusEl.textContent = "Oops, something went wrong.";
           }
         } catch {
-          if (statusEl) statusEl.textContent = "Network error. Please try later.";
+          if (statusEl)
+            statusEl.textContent = "Network error. Please try later.";
         }
       }
       // else: on GitHub Pages without Formspree, normal POST won’t work (405)
     });
   }
 });
+// ----- Mobile nav toggle -----
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("show");
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // close menu when a link is clicked (better UX)
+  navLinks.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      navToggle.setAttribute("aria-expanded", "false");
+    })
+  );
+}
