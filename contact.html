@@ -60,7 +60,7 @@
       </header>
 
       <section class="form-card">
-        <form action="#" method="post">
+        <form id="contact-form" action="#" method="post">
           <div class="field">
             <label for="name">Name</label>
             <input
@@ -92,13 +92,15 @@
               placeholder="Tell me about your idea…"
               required
             ></textarea>
+            <!-- live character counter -->
             <div class="char-row">
               <small><span id="msgCount">0</span>/500</small>
             </div>
-            <p id="form-status" class="muted" style="margin-top: 8px"></p>
           </div>
 
           <button class="btn" type="submit">Send message</button>
+          <!-- status text shown by JS after submit -->
+          <p id="form-status" class="muted" style="margin-top: 8px"></p>
         </form>
       </section>
     </main>
