@@ -308,3 +308,38 @@ footer {
   margin: 0 10px;
   text-align: center;
 }
+/* Desktop/tablet layout (default) */
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px; /* nicer spacing than margins */
+  margin: 24px 0 40px;
+  flex-wrap: nowrap; /* keep in one row on wide screens */
+}
+.feature {
+  flex: 1 1 0; /* equal width columns */
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* BONUS: mobile layout – stack vertically */
+@media (max-width: 720px) {
+  .features {
+    flex-direction: column; /* stack */
+    gap: 12px; /* vertical space between cards */
+  }
+  .feature {
+    text-align: left; /* optional: left-align on mobile */
+    padding: 16px 18px;
+  }
+}
+@media (hover: hover) {
+  .feature:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+}
