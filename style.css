@@ -278,3 +278,33 @@ html[data-theme="dark"] {
     display: inline-block;
   }
 }
+header {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+footer {
+  display: flex;
+  justify-content: space-between; /* content spread out */
+  align-items: center;
+  padding: 10px 20px;
+}
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.feature {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* makes them grow equally */
+  margin: 0 10px;
+  text-align: center;
+}
