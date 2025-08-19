@@ -343,3 +343,57 @@ footer {
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 }
+/* ===== Day 7: CSS Grid ===== */
+
+/* 2-column layout on About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* content | sidebar */
+  gap: 24px;
+  align-items: start;
+}
+
+/* Cards & sidebar cosmetics */
+.about-sidebar .card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+.taglist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.taglist li {
+  background: rgba(108, 76, 224, 0.12);
+  color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Responsive image grid (auto-fit) */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.media-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Mobile: stack columns */
+@media (max-width: 880px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
