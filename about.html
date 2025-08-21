@@ -53,6 +53,16 @@
 
     <main class="container about-grid">
       <article class="about-content">
+        <figure class="profile">
+          <img
+            src="images/profile.jpg"
+            alt="Noelia portrait"
+            width="320"
+            height="320"
+            loading="lazy"
+          />
+          <figcaption>Hi! I’m Noe 👋</figcaption>
+        </figure>
         <h1>About Noelia</h1>
         <p>
           Hello! I’m Noelia — I’m learning web development and building this
@@ -68,31 +78,24 @@
         <h2>Recent Work</h2>
         <div class="media-grid">
           <img
-            src="https://picsum.photos/seed/one/600/420"
-            alt="Sample 1"
-            width="600"
-            height="420"
+            src="images/project1.jpg"
+            srcset="images/project1.jpg 600w, images/project1.jpg 1200w"
+            sizes="(max-width: 600px) 100vw, 600px"
+            alt="Project 1"
             loading="lazy"
           />
           <img
-            src="https://picsum.photos/seed/two/600/420"
-            alt="Sample 2"
-            width="600"
-            height="420"
+            src="images/project2.jpg"
+            srcset="images/project2.jpg 600w, images/project2.jpg 1200w"
+            sizes="(max-width: 600px) 100vw, 600px"
+            alt="Project 2"
             loading="lazy"
           />
           <img
-            src="https://picsum.photos/seed/three/600/420"
-            alt="Sample 3"
-            width="600"
-            height="420"
-            loading="lazy"
-          />
-          <img
-            src="https://picsum.photos/seed/four/600/420"
-            alt="Sample 4"
-            width="600"
-            height="420"
+            src="images/workshop.jpg"
+            srcset="images/workshop.jpg 600w, images/workshop.jpg 1200w"
+            sizes="(max-width: 600px) 100vw, 600px"
+            alt="Workshop"
             loading="lazy"
           />
         </div>
